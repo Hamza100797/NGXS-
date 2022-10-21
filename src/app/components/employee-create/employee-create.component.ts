@@ -39,7 +39,9 @@ export class EmployeeCreateComponent implements OnInit {
       phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
     });
   }
-
+  get f() {
+    return this.employeeForm.controls;
+  }
   // Choose designation with select dropdown
   updateProfile(e) {
     this.employeeForm.get('designation').setValue(e, {
@@ -53,9 +55,10 @@ export class EmployeeCreateComponent implements OnInit {
   }
 
   onSubmit() {
+    debugger
     this.submitted = true;
     if (!this.employeeForm.valid) {
-      return false;
+      return ;
     } else {
       return this.apiService.createEmployee(this.employeeForm.value).subscribe({
         complete: () => {

@@ -1,0 +1,10 @@
+.register-employee {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 21px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+.invalid-feedback {
+  border: 1px red;
+}
